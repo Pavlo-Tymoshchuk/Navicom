@@ -1,0 +1,232 @@
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 55px;
+    background-color: #24282c;
+    position: relative;
+    z-index: 2;
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+    
+    .drop-item {
+        cursor: pointer;
+        position: relative;
+        padding: 42px 20px 42px 0px;
+        
+        .icon-drop {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-flex;
+            font-size: 4px;
+        }
+        
+        &:hover {
+            .header-sub__list {
+                display: block;
+                animation: opacity .4s;
+            }
+        }
+        
+        &.header-leng {
+            font-size: 13px;
+            
+            .icon-drop {
+                font-size: 3px;
+            }
+            
+            .header-sub__list {
+                width: 80px;
+                top: calc(100% - 82px);
+                left: -30px;
+                padding: 48px 30px 16px;
+            }
+        }
+    }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    width: 270px;
+    height: 35px;
+    background: url(../img/logo.svg) no-repeat center;
+    background-size: contain;
+    flex-shrink: 0;
+    margin-right: 70px;
+    
+    img {
+        display: none;
+    }
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #d3d3d3;
+    font-size: 13px;
+}
+
+.header__item {
+    margin-right: 45px;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0
+    }
+    
+    100% {
+        opacity: 1
+    }
+}
+
+.header__live-search {
+    margin-right: 100px;
+    position: relative;
+    
+    .icon-live-search {
+        cursor: pointer;
+    }
+}
+
+.header__live-search__list {
+    width: 295px;
+    position: absolute;
+    left: 0px;
+    top: calc(100% + 37px);
+    background-color: #1D2023;
+    padding: 15px 30px;
+}
+
+.header__live-search__item {
+    padding: 15px 0px;
+    border-bottom: 1px solid #32393F;
+    
+    &:last-child {
+        border: none;
+    }
+    
+    a {
+        display: flex;
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 18px;
+        color: #F1F1F1;
+    }
+    
+    .img {
+        width: 65px;
+        height: 63px;
+        margin-right: 15px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .manufacture {
+        margin-top: auto;
+        color: #5A666F;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+}
+
+.header-input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ababab;
+    padding: 0px 0px 5px 2px;
+    width: 240px;
+    transition: border-color .4s;
+    
+    &:focus {
+        border-color: #ffffff !important;
+        
+        + .icon-live-search {
+            &::before {
+                color: #ffffff !important;
+            }
+        }
+    }
+    
+    &::placeholder {
+        color: #eaeaea;
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+
+.header-phone__wrapper {
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 45px;
+    
+    .header-phone {
+        padding-left: 10px;
+    }
+}
+
+.header-leng {
+    position: relative;
+}
+
+.current-leng {
+    z-index: 2;
+}
+.header-leng__list {
+    position: absolute;
+    right: 0px;
+    top: 100%;
+}
+
+.header-sub__list {
+    display: none;
+    width: 280px;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    background-color: #1d2023;
+    padding: 25px 30px;
+    color: #8596a3;
+    font-size: 13px;
+    line-height: 26px;
+}
+
+.header-sub__item {
+    margin-bottom: 20px;
+    
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+/* /Header */

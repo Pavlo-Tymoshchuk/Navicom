@@ -1,0 +1,243 @@
+@media (min-width: 1160px) {
+    
+    /* General */
+    
+    .main-button {
+        transition: box-shadow .4s, background-color .4s;
+        
+        &:hover {
+            background-color: #00b4ff;
+            box-shadow: 0px 0px 7px rgba(0, 161, 229, .35);
+            
+        }
+    }
+    
+    .main-button-slider {
+        &:hover {
+            background-color: #141719;
+            
+            span {
+                &::before {
+                    color: #0489c1;
+                }
+            }
+        }
+    }
+    
+    .main-slider {
+        .main-button {
+            &::before {
+                transition: width .4s, left .4s;
+            }
+            
+            &:hover {
+                &::before {
+                    width: calc(100% - 90px);
+                    left: 45px;
+                }
+            }
+        }
+    }
+    
+    .main-link {
+        transition: color .4s;
+        
+        .decor {
+            transition: height .4s;
+        }
+        
+        &:hover {
+            color: #f3850d;
+            
+            .decor {
+                height: 100%;
+            }
+        }
+    }
+    /* /General */
+    
+    
+    /* Header */
+    
+    .header__item {
+        transition: color .4s;
+        
+        .icon-drop {
+            &::before {
+                transition: color .4s;
+            }
+        }
+        
+        &:hover {
+            color: #00a1e5;
+            
+            .icon-drop {
+                &::before {
+                    color: #00a1e5;
+                }
+            }
+        }
+    }
+    
+    .header-phone__wrapper {
+        span {
+            &::before {
+                transition: color .4s;
+            }
+        }
+        
+        .header-phone {
+            transition: color .4s;
+        }
+        
+        &:hover {
+            color: #00a1e5;
+            
+            span {
+                &::before {
+                    color: #00a1e5;
+                }
+            }
+        }
+    }
+    
+    .header__live-search {
+        .icon-live-search {
+            &::before {
+                transition: color .4s;
+            }
+        }
+        
+        &:hover {
+            .header-input {
+                border-color: #00a2e6;
+            }
+            
+            .icon-live-search {
+                &::before {
+                    color: #00a2e6;
+                }
+            }
+        }
+    }
+    
+    .header-sub__item {
+        transition: color .4s;
+        
+        &:hover {
+            color: #f1f1f1;
+        }
+    }
+    
+    /* /Header */
+    
+    /* Main slider */
+    
+    .main-slider-dot {
+        
+        &:hover {
+            &::before {
+                background-color: #40a3cd;
+            }
+        }
+    }
+    
+    .main-social__button {
+        transition: background-color .4s;
+        
+        span {
+            &::before {
+                transition: color .4s;
+            }
+        }
+        
+        &:hover {
+            background-color: #141719;
+            
+            span {
+                &::before {
+                    color: #00a1e5;
+                }
+            }
+        }
+    }
+    
+    /* /Main slider */
+    
+    /* Work with us */
+    
+    .work-with-us__item {
+        &:hover {
+            .work-with-us__name {
+                color: #00a1e5;
+            }
+            
+            .work-with-us__button {
+                color: #00a1e5;
+                
+                span {
+                    &::before {
+                        color: #00a1e5;
+                    }
+                }
+            }
+        }
+    }
+    
+    /* /Work with us */
+    
+    
+    /* Popular products */
+    
+    .popular-products__info {
+        .name {
+            &:hover {
+                color: #D9801F;
+            }
+        }
+    }
+    
+    /* /Popular products */
+    
+    /* Post */
+    
+    .post__item {
+        .name {
+            &:hover {
+                color: #0099d7;
+            }
+        }
+    }
+    
+    /* /Post */
+    
+    /* Footer */
+    
+    .footer__social-item {
+        &:hover {
+            background-color: #141719;
+            
+            span {
+                &::before {
+                    color: #0489c1;
+                }
+            }
+        }
+    }
+    
+    .footer__call-back {
+        a {
+            &:hover {
+                color: #0099d7;
+            }
+        }
+    }
+    
+    .footer-copyright__wrapper {
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
