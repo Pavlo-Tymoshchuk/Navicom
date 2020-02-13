@@ -1,4 +1,4 @@
-@media (min-width: 1160px) {
+@media (min-width: 1161px) {
     
     /* General */
     
@@ -9,6 +9,14 @@
             background-color: #00b4ff;
             box-shadow: 0px 0px 7px rgba(0, 161, 229, .35);
             
+        }
+    }
+    
+    .main-button-color  {
+        transition: background-color .4s;
+        
+        &:hover {
+            background-color: #F08F25;
         }
     }
     
@@ -54,10 +62,43 @@
             }
         }
     }
+    
+    .breadcrumbs__item {
+        &:hover {
+            color: #0489c1;
+        }
+    }
+    
     /* /General */
     
     
     /* Header */
+    
+    .header {
+        .drop-item {
+            &:hover {
+                .header-sub__list {
+                    display: block;
+                    animation: opacity .4s;
+                }
+                
+                .icon-drop {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    
+    
+    @keyframes opacity {
+        0% {
+            opacity: 0
+        }
+        
+        100% {
+            opacity: 1
+        }
+    }
     
     .header__item {
         transition: color .4s;
@@ -197,6 +238,18 @@
         }
     }
     
+    .popular-products__item {
+        .popular-product__more {
+            &:hover {
+                &::before,
+                &::after {
+                    background-color: #D9801F;
+                }
+            }
+        }
+    }
+    
+    
     /* /Popular products */
     
     /* Post */
@@ -240,4 +293,155 @@
             }
         }
     }
+    
+    /* /Footer */
+    
+    /* Equipment */
+    
+    .equipment__item  {
+        .link {
+            &:hover {
+                color: #D9801F;
+            }
+        }
+    }
+    
+    .equipment-series__item {
+        .link {
+            &:hover {
+                border-color: #D9801F;
+                
+                .icon-arrow-item {
+                    &::before {
+                        color: #D9801F;
+                    }
+                }
+            }
+        }
+    }
+    
+    .equipment-services__item {
+        .more_info {
+            transition: color .4s;
+            
+            &:hover {
+                color: #D9801F;
+            }
+        }
+    }
+    
+    /* /Equipment */
+    
+    /* Popup */
+    
+    .close__popup {
+        &:hover {
+            span {
+                &::before {
+                    color: #636c8a;
+                }
+            }
+        }
+    }
+    
+    .checkbox__wrapper {
+        a {
+            transition: color .4s;
+            
+            &:hover {
+                color: #D9801F;
+            }
+        }
+    }
+    
+    /* /Popup */
+    
+    /* Catalog */
+    
+    .catalog-input__wrapper {
+        &:hover {
+            color: #D9801F;
+        }
+    }
+    
+    .catalog__button {
+        &:hover {
+            color: #D9801F;
+            
+            .icon-drop {
+                &::before {
+                    color: #D9801F;
+                }
+            }
+        }
+    }
+    
+    .product__slider_buttons {
+        button {
+            &:hover {
+                background-color: #5A666F;
+            }
+        }
+    }
+    
+    .product-order__wrapper {
+        .product-calc {
+            button {
+                &:hover {
+                    color: #c77010;
+                }
+            }
+        }
+    }
+    
+    .product-tabs__item {
+        &:hover {
+            color: #c77010;
+        }
+    }
+    
+    /* /Catalog */
+    
+    /* Contacts */
+    
+    .contacts__footer {
+        a {
+             &:hover {
+                 color: #D9801F;
+             }
+        }
+    }
+    
+    .contacts__phone {
+        transition: color .4s;
+        
+        &:hover {
+                 color: #D9801F;
+             }
+    }
+    
+    .contacts__email {
+        &:hover {
+            color: #D9801F;
+        }
+    }
+    
+    .contacts-general {
+        .contacts__email {
+            .name {
+                color: #F1F1F1;
+            }
+        }
+    }
+    
+    /* Our company */
+    
+    .our-company__item {
+        .more_info {
+            &:hover {
+                color: #D9801F; 
+            }
+        }
+    }
+    
 }

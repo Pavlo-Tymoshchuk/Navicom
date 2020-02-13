@@ -1,0 +1,235 @@
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 6;
+    max-height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    &.active {
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 0.4s;
+    }
+}
+
+.close__popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: none;
+    
+    span {
+        &::before {
+            color: #F1F1F1;
+            transition: color .4s
+        }
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    
+    &.active {
+        display: block;
+    }
+}
+
+.popup-order {
+    max-width: 510px;
+    width: 100%;
+    background-color: #252A2E;
+    padding: 72px 80px;
+    text-align: center;
+    
+    .input__wrapper {
+        margin-bottom: 16px;
+    }
+    
+    h4 {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 16px;
+    }
+    
+    > p {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 24px;
+    }
+    
+    .main-button {
+        max-width: 100%;
+    }
+}
+
+.checkbox__wrapper {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    margin: 13px 0px 32px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    text-align: left;
+    
+    input {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        
+        &:checked {
+            + .custome-checkbox {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    .custome-checkbox {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: #2E3439;
+        position: relative;
+        margin-right: 8px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            background-color: #8596A3;
+            transform: translate(-50%, -50%);
+            transition: opacity .4s;
+        }
+    }
+}
+
+.popup-thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 722px;
+    width: 100%;
+    padding: 120px 80px;
+    background-color: #252A2E;
+    color: #F1F1F1;
+    
+    h4 {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 32px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 32px;
+    }
+    
+    .main-button-color {
+        max-width: 340px;
+        height: 44px;
+    }
+}
+
+
+.popup-more {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    background-color: #252A2E;
+    color: #F1F1F1;
+    
+    h4 {
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 16px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .popup-order {
+        max-width: 480px;
+        .checkbox__wrapper {
+            margin: 16px 0px;
+        }
+    }
+    
+    .popup-thanks {
+        max-width: 625px;
+        padding: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup-order {
+        max-width: 90%;
+        padding: 50px 20px 25px;
+        
+        .checkbox__wrapper {
+            margin: 10px 0px 15px;
+        }
+        
+        h4 {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 8px;
+        }
+        
+        > p {
+            margin-bottom: 16px;
+        }
+    }
+    
+    .popup-thanks {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        padding: 80px 20px 20px;
+        
+        h4 {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 42px;
+        }
+        
+        p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        
+        .main-button-color {
+            margin-top: 50px;
+        }
+    }
+}
