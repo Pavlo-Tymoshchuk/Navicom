@@ -89,6 +89,20 @@
         }
     }
     
+    .header-leng {
+        transition: color .4s;
+        
+        &:hover {
+            color: #00a1e5;
+            
+            .icon-drop {
+                &::before {
+                    color: #00a1e5;
+                }
+            }
+        }
+    }
+    
     
     @keyframes opacity {
         0% {
@@ -434,6 +448,8 @@
         }
     }
     
+    /* /Contacts */
+    
     /* Our company */
     
     .our-company__item {
@@ -444,4 +460,33 @@
         }
     }
     
+    /* /Our company */
+    
+    /* Reviews */
+    
+    .reviews__item {
+        .img {
+            &:hover {
+                + h3 {
+                    color: #D9801F
+                }
+            }
+        }
+    }
+    
+    /* /Reviews* */
+    
+    /* Portfolio */
+    
+    .portfolio__item {
+        .more {
+            &:hover {
+                color: #00A1E2;
+                
+                &::before {
+                    background-color: #00A1E2;
+                }
+            }
+        }
+    }
 }

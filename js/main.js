@@ -71,9 +71,15 @@ document.addEventListener('DOMContentLoaded', function(){
             
             arrowNext.addEventListener('click', function() {
                 let itemShow = slider.querySelector('.js-slider-item.show');
+                let dotActive = slider.querySelector('.main-slider-dot.active');
                 
                 if(slider.querySelector('.js-slider-item.show').nextElementSibling == null) {
                     return;
+                }
+                
+                if(dotActive) {
+                    dotActive.nextElementSibling.classList.add('active');
+                    dotActive.classList.remove('active');
                 }
                 
                 arrowPrev.classList.remove('disabled');
@@ -88,11 +94,16 @@ document.addEventListener('DOMContentLoaded', function(){
             
             arrowPrev.addEventListener('click', function() {
                 let itemShow = slider.querySelector('.js-slider-item.show');
+                let dotActive = slider.querySelector('.main-slider-dot.active');
                 
                 if(slider.querySelector('.js-slider-item.show').previousElementSibling == null) {
                     return;
                 }
                  
+                if(dotActive) {
+                    dotActive.previousElementSibling.classList.add('active');
+                    dotActive.classList.remove('active');
+                }
                 arrowNext.classList.remove('disabled');
                 
                 itemShow.previousElementSibling.classList.add('show');
@@ -134,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 item.classList.remove('active');
             });
             
-            let productItem = document.querySelectorAll('.main-slider__item')
-            productItem.forEach(function(item){
+            let mainItem = document.querySelectorAll('.main-slider__item')
+            mainItem.forEach(function(item){
                 item.classList.remove('show');
             });
             
@@ -150,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 buttonNext.classList.remove('disabled');
             }
             
-            if(index == productItem.length) {
+            if(index == mainItem.length) {
                 buttonNext.classList.add('disabled');
                 buttonPrev.classList.remove('disabled');
             }
@@ -506,4 +517,19 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     
      // /Product calc
+     
+     
+     // Reviews show
+     
+     let reviewsImg = document.querySelectorAll(".reviews__item .img");
+
+     for(var i = 0; reviewsImg.length > i; i++) {
+         
+         reviewsImg[i].addEventListener('click', function(){
+             let imgSrc = this.querySelector('img').getAttribute('src');
+             document.querySelector('.popup_reviews .img img').setAttribute('src', ''+ imgSrc +'');
+         });
+     }
+     
+     // /Reviews show
 });
