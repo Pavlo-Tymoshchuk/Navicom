@@ -135,16 +135,9 @@
     
     .work-with-us {
         position: relative;
-        z-index: 2;
         margin-bottom: 80px;
     }
     
-    .work-with-us__wrapper {
-        &::before {
-            width: 430px;
-            left: 27px;
-        }
-    }
     
     .work-with-us__item {
         width: calc(50% - 15px);
@@ -159,16 +152,24 @@
     }
     
     .popular-products__wrapper {
-        &:before {
-            height: 120px;
-            top: -30px;
+        .main-caption-l {
+            &:before {
+                height: 120px;
+                top: -30px;
+            }
         }
-        
+
         &::after {
             width: 300px;
             height: 780px;
             right: 27px;
             bottom: -400px;
+        }
+
+        &::before {
+            width: 421px;
+            left: 27px;
+            bottom: 548px;
         }
     }
     
@@ -1211,7 +1212,7 @@
     /* Work with us */
     
     .work-with-us {
-        margin-bottom: 95px;
+        margin-bottom: 55px;
     }
     
     .work-with-us__wrapper {
@@ -1252,6 +1253,10 @@
     
     .popular-products__wrapper {
         &::after {
+            display: none;
+        }
+
+        &::before {
             display: none;
         }
     }
@@ -1319,9 +1324,12 @@
     }
     
     .popular-products__wrapper {
-        &::before {
-            display: none;
+        .main-caption-l {
+            &::before {
+                display: none;
+            }
         }
+        
     }
     
     /* /Popular products */

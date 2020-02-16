@@ -499,10 +499,15 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  flex-shrink: 0;
 }
 .header__live-search__item .info {
   display: flex;
   flex-direction: column;
+}
+.header__live-search__item .name {
+  max-height: 36px;
+  overflow: hidden;
 }
 .header__live-search__item .manufacture {
   margin-top: auto;
@@ -663,13 +668,13 @@ body {
   .header-phone__wrapper:hover span::before {
     color: #00a1e5;
   }
-  .header__live-search .icon-live-search::before {
+  .header-input__wrapper .icon-live-search::before {
     transition: color 0.4s;
   }
-  .header__live-search:hover .header-input {
+  .header-input__wrapper:hover .header-input {
     border-color: #00a2e6;
   }
-  .header__live-search:hover .icon-live-search::before {
+  .header-input__wrapper:hover .icon-live-search::before {
     color: #00a2e6;
   }
   .header-sub__item {
@@ -677,6 +682,12 @@ body {
   }
   .header-sub__item:hover {
     color: #f1f1f1;
+  }
+  .header__live-search__item a {
+    transition: color 0.4s;
+  }
+  .header__live-search__item a:hover {
+    color: #00a2e6;
   }
   /* /Header */
   /* Main slider */
@@ -1014,7 +1025,7 @@ body {
   top: -125px;
   width: calc(50% - 20px);
   height: 890px;
-  background-color: #272c31;
+  background-color: #252A2E;
 }
 .about-us-block__wrapper::after {
   content: "";
@@ -1061,18 +1072,11 @@ body {
 /* Work with us */
 .work-with-us {
   margin-bottom: 130px;
+  position: relative;
+  z-index: 3;
 }
 .work-with-us__wrapper {
   position: relative;
-}
-.work-with-us__wrapper::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 65px;
-  width: calc(50% - 20px);
-  height: 900px;
-  background-color: #272c31;
 }
 .work-with-us__list {
   display: flex;
@@ -1170,7 +1174,10 @@ body {
 .popular-products__wrapper {
   position: relative;
 }
-.popular-products__wrapper::before {
+.popular-products__wrapper .main-caption-l {
+  position: relative;
+}
+.popular-products__wrapper .main-caption-l::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1179,6 +1186,15 @@ body {
   height: 205px;
   background-color: #52565a;
   z-index: -1;
+}
+.popular-products__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 420px;
+  width: calc(50% - 20px);
+  height: 900px;
+  background-color: #252A2E;
 }
 .popular-products__wrapper::after {
   content: "";
@@ -1395,7 +1411,7 @@ body {
   left: 20px;
   width: calc(50% - 20px);
   height: 900px;
-  background-color: #272c31;
+  background-color: #252A2E;
   z-index: -1;
 }
 .post__wrapper::after {
@@ -1542,7 +1558,7 @@ body {
   top: -100px;
   width: 405px;
   height: 724px;
-  background-color: #272C31;
+  background-color: #252A2E;
   z-index: -1;
 }
 .equipment::after {
@@ -1569,10 +1585,10 @@ body {
   content: "";
   position: absolute;
   left: 0px;
-  top: 100px;
+  top: 120px;
   width: 540px;
   height: 999px;
-  background-color: #272C31;
+  background-color: #252A2E;
   z-index: -1;
 }
 .equipment__item {
@@ -2132,7 +2148,7 @@ body {
   text-transform: uppercase;
 }
 .product-tabs__item.active {
-  background-color: #272C31;
+  background-color: #252A2E;
   pointer-events: none;
 }
 .product-tabs__wrapper {
@@ -2180,7 +2196,7 @@ body {
   max-width: 920px;
   width: 100%;
   padding: 30px 50px 65px;
-  background-color: #272C31;
+  background-color: #252A2E;
 }
 /* /Catalog page */
 /* Contact */
@@ -3680,12 +3696,7 @@ body {
   /* Work with us */
   .work-with-us {
     position: relative;
-    z-index: 2;
     margin-bottom: 80px;
-  }
-  .work-with-us__wrapper::before {
-    width: 430px;
-    left: 27px;
   }
   .work-with-us__item {
     width: calc(50% - 15px);
@@ -3695,7 +3706,7 @@ body {
   .popular-products {
     margin-bottom: 80px;
   }
-  .popular-products__wrapper:before {
+  .popular-products__wrapper .main-caption-l:before {
     height: 120px;
     top: -30px;
   }
@@ -3704,6 +3715,11 @@ body {
     height: 780px;
     right: 27px;
     bottom: -400px;
+  }
+  .popular-products__wrapper::before {
+    width: 421px;
+    left: 27px;
+    bottom: 548px;
   }
   .popular-products__list {
     margin-top: 35px;
@@ -4457,7 +4473,7 @@ body {
   /* /About us block */
   /* Work with us */
   .work-with-us {
-    margin-bottom: 95px;
+    margin-bottom: 55px;
   }
   .work-with-us__wrapper::before {
     display: none;
@@ -4485,6 +4501,9 @@ body {
     margin: 0px;
   }
   .popular-products__wrapper::after {
+    display: none;
+  }
+  .popular-products__wrapper::before {
     display: none;
   }
   .popular-products__list.js-slider-list {
@@ -4527,7 +4546,7 @@ body {
   .populat-products__img img {
     height: 100%;
   }
-  .popular-products__wrapper::before {
+  .popular-products__wrapper .main-caption-l::before {
     display: none;
   }
   /* /Popular products */

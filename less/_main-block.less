@@ -230,7 +230,7 @@
         top: -125px;
         width: calc(50% - 20px);
         height: 890px;
-        background-color: #272c31;
+        background-color: #252A2E;
     }
     
     &::after {
@@ -286,20 +286,22 @@
 
 .work-with-us {
     margin-bottom: 130px;
+    position: relative;
+    z-index: 3;
 }
 
 .work-with-us__wrapper {
     position: relative;
     
-    &::before {
-        content: "";
-        position: absolute;
-        left: 20px;
-        top: 65px;
-        width: calc(50% - 20px);
-        height: 900px;
-        background-color: #272c31;
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     left: 20px;
+    //     top: 65px;
+    //     width: calc(50% - 20px);
+    //     height: 900px;
+    //     background-color: #252A2E;
+    // }
 }
 
 .work-with-us__list {
@@ -416,16 +418,31 @@
 .popular-products__wrapper {
     position: relative;
     
+    .main-caption-l {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -75px;
+            width: 1px;
+            height: 205px;
+            background-color: #52565a;
+            z-index: -1;
+        }
+    }
+
     &::before {
         content: "";
         position: absolute;
-        left: 50%;
-        top: -75px;
-        width: 1px;
-        height: 205px;
-        background-color: #52565a;
-        z-index: -1;
+        left: 20px;
+        bottom: 420px;
+        width: calc(50% - 20px);
+        height: 900px;
+        background-color: #252A2E;
     }
+    
     
     &::after {
         content: "";
@@ -684,7 +701,7 @@
         left: 20px;
         width: calc(50% - 20px);
         height: 900px;
-        background-color: #272c31;
+        background-color: #252A2E;
         z-index: -1;
     }
     
@@ -856,7 +873,7 @@
         top: -100px;
         width: 405px;
         height: 724px;
-        background-color: #272C31;
+        background-color: #252A2E;
         z-index: -1;
     }
     
@@ -887,10 +904,10 @@
         content: "";
         position: absolute;
         left: 0px;
-        top: 100px;
+        top: 120px;
         width: 540px;
         height: 999px;
-        background-color: #272C31;
+        background-color: #252A2E;
         z-index: -1;
     }
 }
@@ -1577,7 +1594,7 @@
     text-transform: uppercase;
     
     &.active {
-        background-color: #272C31;
+        background-color: #252A2E;
         pointer-events: none;
     }
 }
@@ -1633,7 +1650,7 @@
     max-width: 920px;
     width: 100%;
     padding: 30px 50px 65px;
-    background-color: #272C31;
+    background-color: #252A2E;
 }
 
 /* /Catalog page */
