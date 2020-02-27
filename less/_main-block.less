@@ -2775,3 +2775,115 @@
 }
 
 /* /Portfolio page */
+
+/* News page */
+
+.portfolio-page__wrapper {
+    position: relative;
+    
+    &::before {
+        content: "";
+        width: 540px;
+        height: 2100px;
+        background: url(../img/pattern-1.png) repeat center;
+        position: absolute;
+        top: -95px;
+        right: -200px;
+        z-index: -1;
+    }
+}
+
+.news-page {
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -80px;
+        width: 100vw;
+        height: 581px;
+        background-color: #252A2E;
+        z-index: -1;
+    }
+}
+
+.news-img {
+    margin-bottom: 40px;
+}
+
+.news-info__main {
+    display: flex;
+    max-width: 540px;
+    width: 100%;
+    background: #191A1C;
+    padding: 30px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    
+    & .item {
+        width: 50%;
+        padding-right: 30px;
+        
+        &:last-child {
+            padding-left: 30px;
+            padding-right: 0px;
+            border-left: 1px solid #252A2E;
+            
+            p {
+                margin-bottom: 22px;
+                
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        
+        h4 {
+            font-size: 20px;
+            line-height: 135%;
+            margin-bottom: 33px;
+        }
+    }
+}
+
+.news-info__text {
+    display: inline;
+    font-size: 16px;
+    line-height: 24px;
+    
+    & h1,h2,h3,h4,h4,h6 {
+        line-height: 135%;
+    }
+    
+    p {
+        margin: 20px 0px;
+        
+        &:first-of-type {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.news-slider {
+    margin: 80px 0px;
+    
+    &::before {
+        display: none;
+    }
+}
+
+.news-page__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 150px;
+    
+    h2 {
+        font-size: 26px;
+        line-height: 135%;
+        margin-bottom: 24px;
+    }
+}
+
+/* /News page */

@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     let newElem = itemShow;
                     itemShow.remove();
                     sliderList.append(newElem);
-                },750);
+                },450);
                 
             });
             
